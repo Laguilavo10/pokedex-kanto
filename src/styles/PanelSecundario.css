@@ -1,0 +1,100 @@
+.pokedex-panel-dos{
+  width: 90%;
+  height: calc(500px - 50px);
+  background-color: var(--red-pokedex);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  max-width: 400px;
+  min-width: 300px;
+  border-radius: 10px;
+  align-self: end;
+  padding: 30px 25px;
+}
+
+.pantalla{
+  width: 100%;
+  height: 40%;
+  background-color: black;
+  border-radius: 15px;
+}
+
+.btns-azules{
+  width: 100%;
+  height: 20%;
+  background-color: aqua;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 1fr;
+  border: 3px solid black;
+  overflow: hidden;
+}
+
+.btns-azules > div{
+  outline: 1px solid black;
+}
+
+.otras-teclas{
+  display: grid;
+  grid-template-areas: 
+    "blancas circulo"
+    "negras negras";
+  height: 30%;
+  width: 100%;
+}
+.tcl-blancas{
+  display: flex;
+}
+
+.tcl-blancas > div {
+  width: 30%;
+  height: 70%;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: aliceblue;
+  grid-area: blancas;
+}
+
+.tcl-varios{
+  grid-area: circulo;
+  display: flex;
+  flex-direction: column;
+}
+
+.tcl-varios > div:first-child{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.tcl-varios > div:first-child > div{
+  width: 25%;
+  height: 50%;
+  background-color: black;
+  border-radius: 20px;
+}
+
+.tcl-varios > div:nth-child(2){
+  width: 25px;
+  height: 25px;
+  background-color: yellow;
+  border-radius: 25px;
+  justify-self: end;
+  align-self: flex-end;
+}
+
+.tcl-negras{
+  width: 100%;
+  grid-area: negras;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tcl-negras > div {
+  width: 40%;
+  height: 100%;
+  background-color: black;
+  border-radius: 10px;
+}

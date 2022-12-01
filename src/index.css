@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid tomato; */
+}
+
+:root{
+  --red-pokedex:#de092f;
+}
+
+#root{
+  height: 100vh;
+  background-color: #616161;
+}
+
+.main{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  /* align-items: center; */
+  /* height: 90%; */
+  margin: 40px 0 ;
+}
+
+.header{
+  background-color: #313131;
+}
