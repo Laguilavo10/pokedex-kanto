@@ -1,0 +1,39 @@
+.principal{
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  height: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.pokemon-order{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 10;
+}
+
+.pokemon-order > img{
+  width: 30px;
+  height: 30px;
+}
+
+.pokemon-order > p{
+  font-size: 1.4orem;
+}
+
+.img-pokemon{
+  align-self: center;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 22px;
+}
+
+.nombre-pokemon{
+  margin: 8px;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}

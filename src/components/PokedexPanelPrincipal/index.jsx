@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../styles/PanelPrincipal.css'
 
-export function PokedexPanelPrincipal (){
+export function PokedexPanelPrincipal ({children, Teclas}){
   return (
     <section className='pokedex-panel-uno'>
       <div className='panel1-arriba'>
@@ -18,6 +18,7 @@ export function PokedexPanelPrincipal (){
       </div>
       <article className='panel1-info-container'>
         <div className='panel1-info'>
+          {children[0]}
         </div>
       </article>
       <div className='teclas'>
@@ -30,12 +31,7 @@ export function PokedexPanelPrincipal (){
           </div>
           <div className='verde-inferior'></div>
         </div>
-        <div className='teclas-flechas'>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+        {children[1]}
       </div>
     </section>
   )
