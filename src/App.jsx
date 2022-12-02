@@ -13,7 +13,6 @@ function App() {
   const [pokemon, setPokemon] = useState("");
   const [infoPokemon, setInfoPokemon] = useState("");
   const [loading, setLoading] = useState(true);
-  // const [whoPokemon, setWhoPokemon] = useState(false);
 
   useEffect(() => {
     const API_URL = !pokemon
@@ -31,6 +30,7 @@ function App() {
         a == uwu && setInfoPokemon(WhosThatPokemon);
       });
   }, [pokemon]);
+  
   return (
     <>
       <Header></Header>
