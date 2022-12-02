@@ -1,4 +1,5 @@
 import React from 'react'
+import arrow from '../../assets/arrow.png'
 
 export function Teclas(props) {
 const subirPokemon = ()=>{
@@ -14,10 +15,10 @@ const bajarPokemon = ()=>{
 
   return (
     <div className='teclas-flechas'>
-      <div></div>
-      <div></div>
-      <div onClick={subirPokemon}></div>
-      <div onClick={bajarPokemon}></div>
+      <div><img src={arrow} alt="" /></div>
+      <div><img src={arrow} alt="" /></div>
+      <div onClick={subirPokemon}><img src={arrow} alt="" /></div>
+      <div onClick={bajarPokemon}><img src={arrow} alt="" /></div>
   </div>
   )
 }

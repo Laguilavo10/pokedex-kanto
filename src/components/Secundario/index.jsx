@@ -9,12 +9,10 @@ export function Secundario({infoPokemon}) {
     <div className='stats-container'>
       {stats.map((a)=>(
           <div className='stats-pokemons'>
-
+            <div></div>
             <div style={{height:`${a.value}%`}}><p>{a.value}</p></div>
             <div>{a.stat}</div>
           </div>
-
-
       ))}
 
     </div>
