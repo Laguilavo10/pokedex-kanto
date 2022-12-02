@@ -24,24 +24,26 @@ function App() {
         setLoading(false);
       });
   }, [pokemon]);
-
+  // console.log(infoPokemon);
   return (
     <>
       <Header></Header>
 
       <Buscador setPokemon={setPokemon} />
-      <main className="main">
-        <PokedexPanelPrincipal>
-          {!loading && <Principal infoPokemon={infoPokemon} />}
-          <Teclas infoPokemon={infoPokemon} setPokemon={setPokemon} />
-        </PokedexPanelPrincipal>
+      {loading ? (
+        <h1>paciencia</h1>
+      ) : (
+        <main className="main">
+          <PokedexPanelPrincipal>
+            <Principal infoPokemon={infoPokemon} />
+            <Teclas infoPokemon={infoPokemon} setPokemon={setPokemon} />
+          </PokedexPanelPrincipal>
 
-        <PokedexPanelSecundario
-          infoPokemon={infoPokemon}>
+          <PokedexPanelSecundario infoPokemon={infoPokemon}>
             {!loading && <Secundario infoPokemon={infoPokemon}></Secundario>}
-          
-        </PokedexPanelSecundario>
-      </main>
+          </PokedexPanelSecundario>
+        </main>
+      )}
     </>
   );
 }

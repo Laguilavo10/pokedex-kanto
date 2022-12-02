@@ -153,11 +153,24 @@
 .verde-inferior{
   width: 90px;
   height: 70%;
-  background-color: green;
   border-radius: 10px;
   border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
 }
 
+.verde-inferior > p {
+  font-size: .6rem;
+  text-align: center;
+  padding: 8px;
+  height: 100%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .teclas-flechas{
   width: 25%;
   height: 100%;
@@ -176,12 +189,12 @@
 
 
 .teclas-flechas>div:first-child{
-  width:45px;
+  min-width:45px;
   height: 30px;
 }
 
 .teclas-flechas>div:nth-child(2){
-  width:45px;
+  min-width:45px;
   height: 30px;
   position: relative;
 }
@@ -224,19 +237,5 @@
   transform: rotate(180deg);
 }
 
-/* .teclas-flechas > div >  img{
-  width: 20px;
-  justify-self: center;
-  align-self: center;
-}
-.teclas-flechas > div >  img{
-  width: 20px;
-  justify-self: center;
-  align-self: center;
-}
-.teclas-flechas > div >  img{
-  width: 20px;
-  justify-self: center;
-  align-self: center;
-} */
+
 

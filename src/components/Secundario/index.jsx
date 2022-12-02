@@ -13,7 +13,7 @@ export function Secundario({ infoPokemon }) {
       {stats.map((a) => {
         let porcentaje = a.value >= 100 ? 100 : a.value;
         return (
-          <div className="stats-pokemons">
+          <div className="stats-pokemons" key={a.stat}>
             <div></div>
             <div style={{ height: `${porcentaje}%` }}>
               <p>{a.value}</p>

@@ -1,7 +1,10 @@
 import React from 'react'
 import '../../styles/PanelPrincipal.css'
+import '../../styles/TiposPokemon.css'
 
 export function PokedexPanelPrincipal ({children, Teclas}){
+  let tipos = children[0].props.infoPokemon.types.map((a)=>(a.type.name))
+  console.log(tipos)
   return (
     <section className='pokedex-panel-uno'>
       <div className='panel1-arriba'>
@@ -29,7 +32,9 @@ export function PokedexPanelPrincipal ({children, Teclas}){
             <div></div>
             <div></div>
           </div>
-          <div className='verde-inferior'></div>
+          <div className='verde-inferior'>
+              {tipos.map((a)=>(<p className={a}>{a}</p>))}
+          </div>
         </div>
         {children[1]}
       </div>
