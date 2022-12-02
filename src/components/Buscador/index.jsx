@@ -5,7 +5,8 @@ export  function Buscador({setPokemon}) {
 
   const busqueda = (event)=>{
     event.preventDefault()
-    setPokemon(event.target[0].value)
+    let pokemonSearched =event.target[0].value.toLowerCase()
+    setPokemon(pokemonSearched)
   }
   return (
     <form className='search-container' onSubmit={busqueda}>

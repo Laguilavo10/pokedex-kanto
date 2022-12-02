@@ -3,11 +3,11 @@ import arrow from '../../assets/arrow.png'
 
 export function Teclas(props) {
 const subirPokemon = ()=>{
-  let pokemonUp = props.infoPokemon.id + 1
+  let pokemonUp = props.infoPokemon.id == '?' ? 1 : props.infoPokemon.id + 1
   props.setPokemon(pokemonUp)
 }
 const bajarPokemon = ()=>{
-  let pokemonDown = props.infoPokemon.id - 1
+  let pokemonDown = props.infoPokemon.id == '?' ? 1 : props.infoPokemon.id - 1
   props.setPokemon(pokemonDown)
 }
 

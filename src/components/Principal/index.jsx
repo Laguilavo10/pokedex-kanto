@@ -3,7 +3,8 @@ import Pokeball from '../../assets/icons8-pokeball-48.png'
 import '../../styles/Principal.css'
 
 export  function Principal({infoPokemon}) {
-  let img = infoPokemon.sprites.other.dream_world.front_default
+  console.log(infoPokemon)
+  let img = infoPokemon.sprites.other.dream_world.front_default || infoPokemon.sprite
   let name = infoPokemon.name
   name = name.toUpperCase()
 

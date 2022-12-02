@@ -6,12 +6,14 @@ import { PokedexPanelSecundario } from "./components/PokedexPanelSecundario";
 import { Principal } from "./components/Principal";
 import { Teclas } from "./components/Teclas";
 import { Secundario } from "./components/Secundario";
+import { WhosThatPokemon } from "./whosThatPokemon";
 import "./index.css";
 
 function App() {
   const [pokemon, setPokemon] = useState("");
   const [infoPokemon, setInfoPokemon] = useState("");
   const [loading, setLoading] = useState(true);
+  const [whoPokemon, setWhoPokemon] = useState(false);
 
   useEffect(() => {
     const API_URL = !pokemon
@@ -20,16 +22,22 @@ function App() {
     fetch(API_URL)
       .then((res) => res.json())
       .then((data) => {
-        setInfoPokemon(data);
-        setLoading(false);
-      });
+        setWhoPokemon(false)
+        setInfoPokemon(data)
+        setLoading(false)
+      })
+      .catch((a)=>{
+        let uwu = `SyntaxError: Unexpected token 'N', "Not Found" is not valid JSON`
+        console.log(typeof a, typeof uwu)
+        a == uwu && setInfoPokemon(WhosThatPokemon)
+      })
   }, [pokemon]);
-  // console.log(infoPokemon);
   return (
     <>
       <Header></Header>
 
       <Buscador setPokemon={setPokemon} />
+      
       {loading ? (
         <h1>paciencia</h1>
       ) : (

@@ -4,7 +4,7 @@
   box-sizing: border-box;
   /* outline: 1px solid tomato; */
   color: aliceblue;
-  /* font-family: PokemonFont; */
+
 }
 
 
@@ -27,7 +27,8 @@
 }
 
 #root{
-  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
   background-color: #616161;
 }
 
@@ -86,4 +87,11 @@
   border: none;
   margin-left: 1rem;
   padding: 10px;
+}
+
+
+.whos-that-pokemon{
+  width: 200px;
+  justify-self: center;
+  align-self: center;
 }
