@@ -28,7 +28,6 @@ function App() {
       })
       .catch((a)=>{
         let uwu = `SyntaxError: Unexpected token 'N', "Not Found" is not valid JSON`
-        console.log(typeof a, typeof uwu)
         a == uwu && setInfoPokemon(WhosThatPokemon)
       })
   }, [pokemon]);
@@ -37,7 +36,7 @@ function App() {
       <Header></Header>
 
       <Buscador setPokemon={setPokemon} />
-      
+
       {loading ? (
         <h1>paciencia</h1>
       ) : (

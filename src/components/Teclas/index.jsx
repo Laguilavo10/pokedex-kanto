@@ -11,6 +11,14 @@ const bajarPokemon = ()=>{
   props.setPokemon(pokemonDown)
 }
 
+document.addEventListener('keydown', (event)=>{
+  if (event.code === 'ArrowUp') {
+    subirPokemon()
+  }else if (event.code === 'ArrowDown'){
+    bajarPokemon()
+  }
+})
+
   return (
     <div className='teclas-flechas'>
       <div><img src={arrow} alt="" /></div>
