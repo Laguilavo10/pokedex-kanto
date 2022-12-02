@@ -5,6 +5,7 @@ import { PokedexPanelPrincipal } from "./components/PokedexPanelPrincipal";
 import { PokedexPanelSecundario } from "./components/PokedexPanelSecundario";
 import { Principal } from "./components/Principal";
 import { Teclas } from "./components/Teclas";
+import { Secundario } from "./components/Secundario";
 import "./index.css";
 
 function App() {
@@ -32,13 +33,15 @@ function App() {
       <main className="main">
         <PokedexPanelPrincipal>
           {!loading && <Principal infoPokemon={infoPokemon} />}
-          <Teclas infoPokemon={infoPokemon} setPokemon={setPokemon}/>
+          <Teclas infoPokemon={infoPokemon} setPokemon={setPokemon} />
         </PokedexPanelPrincipal>
 
-
-        <PokedexPanelSecundario></PokedexPanelSecundario>
+        <PokedexPanelSecundario
+          infoPokemon={infoPokemon}>
+            {!loading && <Secundario infoPokemon={infoPokemon}></Secundario>}
+          
+        </PokedexPanelSecundario>
       </main>
-
     </>
   );
 }

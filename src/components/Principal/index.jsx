@@ -6,7 +6,7 @@ export  function Principal({infoPokemon}) {
   let img = infoPokemon.sprites.other.dream_world.front_default
   let name = infoPokemon.name
   name = name.toUpperCase()
-  // console.log(name)
+
   return (
     <>
     <div className='principal'>
