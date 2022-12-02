@@ -1,23 +1,24 @@
-import React from 'react'
+import {useEffect} from 'react'
 import arrow from '../../assets/arrow.png'
 
 export function Teclas(props) {
-const subirPokemon = ()=>{
-  let pokemonUp = props.infoPokemon.id == '?' ? 1 : props.infoPokemon.id + 1
+  // document.addEventListener('keyup', (event)=>{
+  //   if (event.code == 'KeyW') {
+  //       subirPokemon()
+  //   }else if(event.code == 'KeyS'){
+  //       bajarPokemon()
+  //   }
+  //   console.log(event)
+  // })
+
+function subirPokemon(){
+  let pokemonUp = props.infoPokemon.id == '?' ? 1 :( props.infoPokemon.id + 1)
   props.setPokemon(pokemonUp)
 }
-const bajarPokemon = ()=>{
-  let pokemonDown = props.infoPokemon.id == '?' ? 1 : props.infoPokemon.id - 1
-  props.setPokemon(pokemonDown)
+function bajarPokemon(){
+  let pokemonUp = props.infoPokemon.id == '?' ? 1 : (props.infoPokemon.id - 1)
+  props.setPokemon(pokemonUp)
 }
-
-document.addEventListener('keydown', (event)=>{
-  if (event.code === 'ArrowUp') {
-    subirPokemon()
-  }else if (event.code === 'ArrowDown'){
-    bajarPokemon()
-  }
-})
 
   return (
     <div className='teclas-flechas'>

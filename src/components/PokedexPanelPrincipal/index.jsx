@@ -2,7 +2,7 @@ import React from 'react'
 import '../../styles/PanelPrincipal.css'
 import '../../styles/TiposPokemon.css'
 
-export function PokedexPanelPrincipal ({children, Teclas}){
+export function PokedexPanelPrincipal ({children}){
   let tipos = children[0].props.infoPokemon.types.map((a)=>(a.type.name))
   return (
     <section className='pokedex-panel-uno'>
